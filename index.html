@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>activity_events</title>
+</head>
+<body>
+    <script src="jquery-3.7.1.min.js"></script>
+
+  <style>
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+
+    .box-style {
+      background-color: lightblue;
+      padding: 10px;
+      border: 2px solid blue;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function () {
+      $("#button1").click(function () {
+        $("#text1").text("The button was clicked!");
+      });
+
+      $("#text1").dblclick(function () {
+        $(this).toggleClass("highlight");
+      });
+
+      $("#box1").hover(
+        function () {
+          $(this).addClass("box-style");
+        },
+        function () {
+          $(this).removeClass("box-style");
+        }
+      );
+    });
+  </script>
+</head>
+<body>
+  <h1>Using jQuery Selectors and Events</h1>
+
+  <button id="button1">Click Me</button>
+
+  <p id="text1">Double-click this paragraph to change its style.</p>
+
+  <div id="box1">Hover over this box to change its style.</div>
+
+  <h2>jQuery Selectors Used</h2>
+
+  <dl>
+    <dt>#button1</dt>
+    <dd>Selects the button by its ID and applies a click event.</dd>
+
+    <dt>#text1</dt>
+    <dd>Selects the paragraph by its ID and applies a double-click event to change its style.</dd>
+
+    <dt>#box1</dt>
+    <dd>Selects the div by its ID and applies a hover event to change its appearance.</dd>
+  </dl>
+
+</body>
+</html>
